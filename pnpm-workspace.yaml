@@ -1,0 +1,39 @@
+packages:
+  - libs/*
+
+catalogMode: prefer
+
+catalog:
+  '@types/node': ^24
+  typescript: 6.0.3
+  '@typescript/native-preview': 7.0.0-dev.20260509.2
+  vite: npm:@voidzero-dev/vite-plus-core@0.2.2
+  vite-plus: 0.2.2
+  plop: 4.0.5
+  handlebars: 4.7.9
+  kolorist: ^1.8.0
+  change-case: ^5.4.4
+  lowdb: ^7.0.1
+  find-up: ^8.0.0
+  cross-spawn: ^7.0.6
+  commander: ^14.0.3
+  '@types/cross-spawn': ^6.0.6
+  valibot: ^1.4.0
+  turbo: ^2.9.14
+  tsx: 4.21.0
+  node-plop: ^0.32.3
+  inquirer: 9.3.8
+  '@types/inquirer': 9.0.9
+  dotenv: 17.2.3
+  '@oyolincc/dev-config': 0.1.0
+  '@oyolincc/cli': 2.1.0
+
+overrides:
+  vite: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'
+allowBuilds:
+  esbuild: true

@@ -1,0 +1,11 @@
+{
+  "env": {
+    "dir": "./envs/",
+    "presets": {
+      "example": [".env.example"]
+    }
+  },
+  "codeGenerator": {
+    "root": "."
+  }
+}

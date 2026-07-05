@@ -1,0 +1,31 @@
+# EditorConfig is awesome: https://editorconfig.org
+
+# 根配置文件，表示这是一个顶级配置文件
+root = true
+
+# 默认设置，适用于所有文件
+[*]
+charset = utf-8                  # 设置字符集为 UTF-8
+end_of_line = lf                 # 设置行结束符为 LF (适用于 Unix/Linux/macOS)
+insert_final_newline = true      # 文件末尾插入一个空行
+trim_trailing_whitespace = true  # 删除行尾的多余空格
+indent_style = space             # 使用空格缩进
+indent_size = 2                  # 每个缩进级别使用 2 个空格
+tab_width = 2                    # tab 键等于 2 个空格宽度
+
+# 针对 JavaScript 文件的设置
+[*.js]
+indent_size = 2                  # JavaScript 中使用 2 个空格缩进
+
+# 针对 TypeScript 文件的设置
+[*.ts]
+indent_size = 2                  # TypeScript 中使用 2 个空格缩进
+
+# 针对 JSON 文件的设置
+[*.json]
+indent_style = space             # 使用空格缩进
+indent_size = 2                  # 每个缩进级别使用 2 个空格
+
+# 针对 Markdown 文件的设置
+[*.md]
+trim_trailing_whitespace = false # Markdown 文件末尾不删除空白

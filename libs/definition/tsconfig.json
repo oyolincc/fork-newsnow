@@ -1,0 +1,5 @@
+{
+  "extends": "@oyolincc/dev-config/tsconfig.bundler.json",
+  "files": [],
+  "include": ["src", "./*.ts", "./*.mts"]
+}

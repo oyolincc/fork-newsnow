@@ -1,0 +1,73 @@
+{
+  "name": "@newsnow/board",
+  "version": "0.0.0",
+  "private": true,
+  "description": "@newsnow/board",
+  "homepage": "https://github.com/oyolincc/fork-newsnow#readme",
+  "bugs": {
+    "url": "https://github.com/oyolincc/fork-newsnow/issues"
+  },
+  "license": "MIT",
+  "author": "oyolincc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyolincc/fork-newsnow.git",
+    "directory": "apps/board"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite dev",
+    "generate-routes": "tsr generate",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "check": "vp check",
+    "prepublishOnly": "vp run build"
+  },
+  "dependencies": {
+    "@newsnow/db": "workspace:*",
+    "@newsnow/definition": "workspace:*",
+    "@tanstack/react-router": "catalog:",
+    "@tanstack/react-start": "catalog:",
+    "cheerio": "catalog:",
+    "dayjs": "catalog:",
+    "defu": "catalog:",
+    "fast-xml-parser": "catalog:",
+    "iconv-lite": "catalog:",
+    "jose": "catalog:",
+    "nitro": "catalog:",
+    "ofetch": "catalog:",
+    "pino": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@napi-rs/pinyin": "catalog:",
+    "@oyolincc/dev-config": "catalog:",
+    "@rollup/pluginutils": "catalog:",
+    "@tanstack/router-cli": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "fast-glob": "catalog:",
+    "pino-pretty": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

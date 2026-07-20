@@ -1,7 +1,8 @@
 {
   "configurations": [
     {
-      "command": "IS_OVERRIDE=1 pnpm -C libs/code-gen pkg-gen",
+      // "command": "IS_OVERRIDE=1 pnpm -C libs/code-gen pkg-gen",
+      "command": "pnpm -C libs/definition build",
       "name": "repo-ts",
       "request": "launch",
       // "skipFiles": [

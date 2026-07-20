@@ -1,0 +1,11 @@
+{
+  "extends": "@oyolincc/dev-config/tsconfig.frontend.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "files": [],
+  "include": ["src", "./*.ts", "./*.mts"]
+}

@@ -33,6 +33,7 @@
     "prepublishOnly": "vp run build"
   },
   "dependencies": {
+    "change-case": "catalog:",
     "valibot": "catalog:"
   },
   "devDependencies": {

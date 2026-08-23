@@ -54,7 +54,6 @@
     "@oyolincc/dev-config": "catalog:",
     "@types/better-sqlite3": "catalog:",
     "@types/node": "catalog:",
-    "@typescript/native-preview": "catalog:",
     "drizzle-kit": "catalog:drizzle",
     "tsx": "catalog:",
     "typescript": "catalog:",

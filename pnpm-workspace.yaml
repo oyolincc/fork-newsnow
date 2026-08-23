@@ -6,10 +6,9 @@ catalogMode: prefer
 
 catalog:
   '@types/node': ^24
-  typescript: 6.0.3
-  '@typescript/native-preview': 7.0.0-dev.20260509.2
-  vite: npm:@voidzero-dev/vite-plus-core@0.2.2
-  vite-plus: 0.2.2
+  typescript: 7.0.2
+  vite: npm:@voidzero-dev/vite-plus-core@0.2.8
+  vite-plus: 0.2.8
   plop: 4.0.5
   handlebars: 4.7.9
   kolorist: ^1.8.0
@@ -26,8 +25,8 @@ catalog:
   inquirer: 9.3.8
   '@types/inquirer': 9.0.9
   dotenv: 17.2.3
-  '@oyolincc/dev-config': 0.1.0
-  '@oyolincc/cli': 2.1.0
+  '@oyolincc/dev-config': 0.1.1
+  '@oyolincc/cli': 2.1.3
   '@tanstack/react-start': ^1.168.27
   '@tanstack/react-router': ^1.170.17
   react: ^19.2.7

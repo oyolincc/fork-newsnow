@@ -1,2 +1,7 @@
 export * from './defs/runtime'
 export * from './defs/log'
+export * from './defs/auth'
+export * from './defs/snapshot'
+export * from './defs/http'
+export * from './defs/third-party'
+export * from './defs/sqlite'

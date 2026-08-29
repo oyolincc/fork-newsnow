@@ -1,13 +1,21 @@
 import { defineConfig } from 'vite-plus'
 import { packConfig } from '@oyolincc/dev-config'
+import path from 'node:path'
+
+const __dirname = import.meta.dirname
 
 export default defineConfig({
   pack: {
     ...packConfig,
     entry: {
-      index: 'src/index.ts',
-      schema: 'src/schema/index.ts',
+      'sqlite/schema': 'src/dialects/sqlite/schema/index.ts',
+      'sqlite/sqlite': 'src/dialects/sqlite/sqlite.ts',
     },
     exports: true,
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
   },
 })

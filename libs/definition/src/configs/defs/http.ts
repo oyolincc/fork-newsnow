@@ -1,0 +1,8 @@
+import { defineStaticConfig } from '../proto'
+
+export const httpConfig = defineStaticConfig(() => ({
+  userAgent:
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  timeout: 10_000,
+  retry: 3,
+}))

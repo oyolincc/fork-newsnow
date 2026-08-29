@@ -19,16 +19,9 @@
   ],
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
-    },
-    "./schema": {
-      "types": "./dist/schema.d.mts",
-      "import": "./dist/schema.mjs",
-      "default": "./dist/schema.mjs"
-    }
+    "./sqlite/schema": "./dist/sqlite/schema.mjs",
+    "./sqlite/sqlite": "./dist/sqlite/sqlite.mjs",
+    "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public"
@@ -38,11 +31,10 @@
     "dev": "vp pack --watch",
     "test": "vp test",
     "check": "vp check",
-    "prepublishOnly": "vp run build",
-    "export": "oyo env db-dev -- drizzle-kit export",
-    "dev:push": "oyo env db-dev -- drizzle-kit push",
-    "dev:gen": "oyo env db-dev -- drizzle-kit generate",
-    "dev:migrate": "oyo env db-dev -- drizzle-kit migrate"
+    "sqlite:export": "drizzle-kit export --config=src/dialects/sqlite/drizzle.config.ts",
+    "dev:sqlite:push": "drizzle-kit push --config=src/dialects/sqlite/drizzle.config.ts",
+    "dev:sqlite:gen": "drizzle-kit generate --config=src/dialects/sqlite/drizzle.config.ts",
+    "dev:sqlite:migrate": "drizzle-kit migrate --config=src/dialects/sqlite/drizzle.config.ts"
   },
   "dependencies": {
     "@newsnow/definition": "workspace:*",

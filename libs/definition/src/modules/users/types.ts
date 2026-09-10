@@ -5,6 +5,13 @@ export interface AuthTokenPayload {
   type: AuthType
 }
 
+export interface AuthSessionPayload extends AuthTokenPayload {
+  profile: {
+    name: string
+    avatar: string
+  }
+}
+
 export type UserSyncData = Record<string, string[]>
 
 /**

@@ -3,9 +3,11 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./src/*"]
+      "#/*": ["./frontend/*"],
+      "@/*": ["./server/*"],
+      "@error-categories": ["./server/hono/shared/errors/defs/index.ts"]
     }
   },
   "files": [],
-  "include": ["src", "./*.ts", "./*.mts"]
+  "include": ["frontend", "server", "./*.ts", "./*.mts"]
 }

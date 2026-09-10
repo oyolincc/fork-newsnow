@@ -11,8 +11,20 @@ export default defineConfig({
     tsconfigPaths: true,
   },
   plugins: [
-    nitro(),
-    tanstackStart(),
+    nitro({
+      serverDir: './server',
+      handlers: [
+        {
+          route: '/api/**',
+          handler: './server/hono/adapters/nodejs/entry.ts',
+          middleware: false,
+          lazy: false,
+        },
+      ],
+    }),
+    tanstackStart({
+      srcDirectory: './frontend',
+    }),
     // react's vite plugin must come after start's vite plugin
     viteReact(),
   ],

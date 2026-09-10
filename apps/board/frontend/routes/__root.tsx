@@ -28,6 +28,8 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
+// TODO: 本期不迁移 PWA version、站点资源、source pinyin/updated-source 产物；前端与部署方案确定后从此根路由统一接入。
+
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

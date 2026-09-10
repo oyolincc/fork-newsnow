@@ -9,7 +9,7 @@ export default defineConfig({
     ...packConfig,
     entry: {
       'sqlite/schema': 'src/dialects/sqlite/schema/index.ts',
-      'sqlite/sqlite': 'src/dialects/sqlite/sqlite.ts',
+      'sqlite/sqlite': 'src/dialects/sqlite/client.ts',
     },
     exports: true,
   },

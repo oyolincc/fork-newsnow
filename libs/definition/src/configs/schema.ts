@@ -11,3 +11,13 @@ export const $S_BooleanString = v.pipe(
   ),
   v.transform((value) => value !== 'false'),
 )
+
+export const $S_NumberString = (defaultValue: number) =>
+  v.optional(
+    v.pipe(
+      v.string(),
+      v.check((value) => Number.isFinite(Number(value)), 'Expected a numeric string'),
+      v.transform(Number),
+    ),
+    String(defaultValue),
+  )

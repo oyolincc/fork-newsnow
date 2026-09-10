@@ -12,6 +12,16 @@
       "type": "node-terminal"
     },
     {
+      "command": "pnpm -C apps/board dev",
+      "name": "repo-server",
+      "request": "launch",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "sourceMaps": true,
+      "type": "node-terminal"
+    },
+    {
       "name": "Attach to process",
       "port": 19230,
       "request": "attach",

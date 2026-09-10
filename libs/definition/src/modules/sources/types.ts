@@ -1,4 +1,17 @@
-/**
- * 新闻源目录还没有迁移到 definition，因此先用普通字符串表示 source id。
- */
-export type SourceID = string
+export const SourceOrigin = Object.freeze({
+  LIVE: 'live',
+  SNAPSHOT: 'snapshot',
+})
+export type SourceOrigin = (typeof SourceOrigin)[keyof typeof SourceOrigin]
+
+export type SourceMetadata = {
+  name: string
+  column: string
+  home: string
+  color: string
+  interval: number
+  title?: string
+  type?: 'hottest' | 'realtime'
+  desc?: string
+  redirect?: string
+}

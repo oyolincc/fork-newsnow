@@ -20,6 +20,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.output
 .env
 .env.*
 !.env.example
@@ -27,6 +28,7 @@ dist-ssr
 .eslintcache
 .worktrees/
 **/temp/
+db-data/
 .turbo
 !.vscode/
 !.vscode/settings.json

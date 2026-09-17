@@ -21,14 +21,27 @@ catalog:
 
 catalogs:
   frontend:
-    '@tanstack/react-start': ^1.168.27
-    '@tanstack/react-router': ^1.170.17
+    '@atlaskit/pragmatic-drag-and-drop': ^1.7.7
+    '@atlaskit/pragmatic-drag-and-drop-auto-scroll': ^2.1.5
+    '@atlaskit/pragmatic-drag-and-drop-hitbox': ^1.1.0
+    '@formkit/auto-animate': ^0.9.0
+    '@phosphor-icons/react': ^2.1.10
+    '@tailwindcss/vite': ^4.3.3
+    '@tanstack/react-query': ^5.90.21
+    '@tanstack/react-query-devtools': ^5.102.8
+    '@tanstack/react-start': ^1.168.52
+    '@tanstack/react-router': ^1.170.19
+    '@tanstack/react-router-devtools': ^1.167.1
     '@tanstack/router-cli': ^1.167.18
+    cmdk: ^1.1.1
+    framer-motion: ^12.34.3
+    jotai: ^2.18.0
     react: 19.2.7
     react-dom: 19.2.7
     '@types/react': 19.2.17
     '@types/react-dom': 19.2.3
     '@napi-rs/pinyin': ^1.7.7
+    tailwindcss: ^4.3.3
   server:
     hono: ^4.13.1
     '@hono/swagger-ui': ^0.6.1

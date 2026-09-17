@@ -1,14 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { NewsBoard } from '#/modules/board/components/NewsBoard'
+import { useAtomValue } from 'jotai'
+import { focusSourceIdsAtom } from '#/modules/board/stores'
 
 export const Route = createFileRoute('/')({ component: Home })
 
 function Home() {
-  return (
-    <div className="p-8">
-      <h1 className="text-4xl font-bold">Welcome to TanStack Start</h1>
-      <p className="mt-4 text-lg">
-        Edit <code>frontend/routes/index.tsx</code> to get started.
-      </p>
-    </div>
-  )
+  const focusSourceIds = useAtomValue(focusSourceIdsAtom)
+  return <NewsBoard columnId={focusSourceIds.length ? 'focus' : 'hottest'} />
 }

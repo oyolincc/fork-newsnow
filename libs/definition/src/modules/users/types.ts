@@ -5,7 +5,7 @@ export interface AuthTokenPayload {
   type: AuthType
 }
 
-export interface AuthSessionPayload extends AuthTokenPayload {
+export interface SessionUser extends AuthTokenPayload {
   profile: {
     name: string
     avatar: string

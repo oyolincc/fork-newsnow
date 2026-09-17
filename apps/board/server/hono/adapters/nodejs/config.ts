@@ -9,7 +9,7 @@ import {
   snapshotSchemaConfig,
   sqliteSchemaConfig,
   thirdPartySchemaConfig,
-} from '@newsnow/definition'
+} from '@newsnow/definition/backend'
 import { flatten, isValiError } from 'valibot'
 import type { AppConfig } from '@/hono/shared/app/types'
 

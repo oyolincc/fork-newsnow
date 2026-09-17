@@ -19,7 +19,8 @@
   ],
   "type": "module",
   "exports": {
-    ".": "./dist/index.mjs",
+    "./backend": "./dist/backend.mjs",
+    "./frontend": "./dist/frontend.mjs",
     "./package.json": "./package.json"
   },
   "publishConfig": {

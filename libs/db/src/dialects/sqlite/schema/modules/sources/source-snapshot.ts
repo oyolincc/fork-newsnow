@@ -1,5 +1,5 @@
 import { sqliteTable, text } from 'drizzle-orm/sqlite-core'
-import type { NewsItem, SourceID } from '@newsnow/definition'
+import type { NewsItem, SourceID } from '@newsnow/definition/backend'
 import { jsonColumn, updatedAtCol } from '@/dialects/sqlite/schema/columns'
 import type { SelectVOResults } from '@/shared/types'
 import { defineVO } from '@/shared/types'

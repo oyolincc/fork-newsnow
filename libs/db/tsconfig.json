@@ -6,5 +6,5 @@
     }
   },
   "files": [],
-  "include": ["src", "./*.ts", "./*.mts"]
+  "include": ["src", "drizzle-kit", "./*.ts", "./*.mts"]
 }

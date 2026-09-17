@@ -2,7 +2,8 @@
   "env": {
     "dir": "./envs/",
     "presets": {
-      "example": [".env.example"]
+      "sqlite": [".env.sqlite"],
+      "server": [".env.sqlite"]
     }
   },
   "codeGenerator": {

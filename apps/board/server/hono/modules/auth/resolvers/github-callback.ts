@@ -2,7 +2,7 @@ import { setCookie } from 'hono/cookie'
 import { SignJWT } from 'jose'
 import { users } from '@newsnow/db/sqlite/schema'
 import type { Context } from 'hono'
-import type { AuthSessionPayload } from '@newsnow/definition'
+import type { SessionUser } from '@newsnow/definition/backend'
 import type { AppEnv } from '@/hono/shared/app/types'
 import { getGitHubToken, getGitHubUser } from '@/hono/upstream/github/api'
 import type { OAuthTransaction } from '@/hono/modules/auth/types'
@@ -43,7 +43,7 @@ export async function finishGitHubLogin(
       target: users.id,
       set: { email: githubUser.email, updatedAt: new Date() },
     })
-  const session: AuthSessionPayload = {
+  const session: SessionUser = {
     id,
     type: 'github',
     profile: { name: githubUser.login, avatar: githubUser.avatar_url },

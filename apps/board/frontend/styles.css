@@ -1,17 +1,74 @@
+@import 'tailwindcss';
 
-@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-* {
-  box-sizing: border-box;
+/* 在这里定义一次主色和品牌字体，组件里就能直接写 text-primary、font-brand，不必重复颜色值和字体列表。 */
+@theme {
+  --color-primary-50: #fef2f2;
+  --color-primary-100: #fee2e2;
+  --color-primary-200: #fecaca;
+  --color-primary-300: #fca5a5;
+  --color-primary-400: #f87171;
+  --color-primary-500: #ef4444;
+  --color-primary-600: #dc2626;
+  --color-primary-700: #b91c1c;
+  --color-primary-800: #991b1b;
+  --color-primary-900: #7f1d1d;
+  --color-primary: #ef4444;
+  --font-brand: 'Baloo 2', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 html,
-body,
-#app {
-  min-height: 100%;
-}
-
 body {
+  height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
+.btn {
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+@font-face {
+  font-family: 'Baloo 2';
+  src: url('/Baloo2-Bold.subset.ttf');
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* 先铺深灰底色，再叠一层顶部红色渐变；即使渐变不支持，页面仍有可读的深色背景。 */
+body {
+  background-color: rgb(39 39 42);
+  background-image: radial-gradient(
+    ellipse 80% 80% at 50% -30%,
+    rgb(248 113 113 / 30%),
+    transparent
+  );
+  color: rgb(212 212 216);
+  user-select: none;
+}
+
+a,
+button {
+  cursor: default;
+}
+
+.menu-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+}
+
+.menu-item:hover {
+  background: rgb(163 163 163 / 10%);
+}
+
+.grabbing * {
+  cursor: grabbing;
+}

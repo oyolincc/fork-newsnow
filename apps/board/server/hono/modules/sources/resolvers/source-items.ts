@@ -1,6 +1,6 @@
 import { eq } from 'drizzle-orm'
 import { sourceSnapshots, vcSourceSnapshots } from '@newsnow/db/sqlite/schema'
-import { SourceOrigin, sourceCatalog, type NewsItem, type SourceID } from '@newsnow/definition'
+import { SourceOrigin, sourceCatalog, type NewsItem, type SourceID } from '@newsnow/definition/backend'
 import type { Context } from 'hono'
 import type { AppEnv } from '@/hono/shared/app/types'
 import { E } from '@error-categories'

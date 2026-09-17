@@ -1,6 +1,6 @@
 import { sql } from 'drizzle-orm'
 import { sqliteTable, text } from 'drizzle-orm/sqlite-core'
-import type { UserSyncState } from '@newsnow/definition'
+import type { UserSyncState } from '@newsnow/definition/backend'
 import { jsonColumn, modifiedTimeCols } from '@/dialects/sqlite/schema/columns'
 import type { SelectVOResults } from '@/shared/types'
 import { defineVO } from '@/shared/types'

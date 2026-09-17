@@ -31,10 +31,10 @@
     "dev": "vp pack --watch",
     "test": "vp test",
     "check": "vp check",
-    "sqlite:export": "drizzle-kit export --config=src/dialects/sqlite/drizzle.config.ts",
-    "dev:sqlite:push": "drizzle-kit push --config=src/dialects/sqlite/drizzle.config.ts",
-    "dev:sqlite:gen": "drizzle-kit generate --config=src/dialects/sqlite/drizzle.config.ts",
-    "dev:sqlite:migrate": "drizzle-kit migrate --config=src/dialects/sqlite/drizzle.config.ts"
+    "sqlite:export": "oyo env sqlite -- drizzle-kit export --config=drizzle-kit/sqlite.config.ts",
+    "dev:sqlite:push": "oyo env sqlite -- drizzle-kit push --config=drizzle-kit/sqlite.config.ts",
+    "dev:sqlite:gen": "oyo env sqlite -- drizzle-kit generate --config=drizzle-kit/sqlite.config.ts",
+    "dev:sqlite:migrate": "oyo env sqlite -- drizzle-kit migrate --config=drizzle-kit/sqlite.config.ts"
   },
   "dependencies": {
     "@newsnow/definition": "workspace:*",
@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:drizzle",
+    "@oyolincc/cli": "catalog:",
     "@oyolincc/dev-config": "catalog:",
     "@types/better-sqlite3": "catalog:drizzle",
     "@types/node": "catalog:",

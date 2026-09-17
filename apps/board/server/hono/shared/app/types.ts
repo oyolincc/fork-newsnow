@@ -5,11 +5,11 @@ import type {
   LogRollRawConfig,
   LogRollSchemaConfig,
   RuntimeConfig,
+  SessionUser,
   SnapshotSchemaConfig,
   SqliteSchemaConfig,
   ThirdPartySchemaConfig,
-} from '@newsnow/definition'
-import type { AuthSessionPayload } from '@newsnow/definition'
+} from '@newsnow/definition/backend'
 import type { MiddlewareHandler } from 'hono'
 import type { RequestIdVariables } from 'hono/request-id'
 import type { PinoLogger } from 'hono-pino'
@@ -46,6 +46,5 @@ export type AppDependencies = {
 }
 
 export type AppEnv = {
-  Variables: RequestIdVariables &
-    AppDependencies & { logger?: AppLogger; session?: AuthSessionPayload }
+  Variables: RequestIdVariables & AppDependencies & { logger?: AppLogger; session?: SessionUser }
 }

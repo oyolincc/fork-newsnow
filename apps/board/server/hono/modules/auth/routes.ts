@@ -5,7 +5,7 @@ import { base64url, SignJWT } from 'jose'
 import type { AppEnv } from '@/hono/shared/app/types'
 import { successJson, OpenApiTags } from '@/hono/shared/network/utils'
 import { E } from '@error-categories'
-import { clearSession, requireAuth } from '@/hono/middlewares/auth'
+import { clearSession } from '@/hono/middlewares/auth'
 import { finishGitHubLogin } from './resolvers/github-callback'
 import type { OAuthTransaction } from './types'
 
@@ -98,12 +98,13 @@ export const authRoutes = new Hono<AppEnv>()
         throw E.AUTH.OAUTH.create()
       await finishGitHubLogin(context, transaction, code)
       // official 曾在 redirect query 传 JWT/user；本实现刻意使用 HttpOnly Cookie，避免泄露到 history、Referer 和日志。
-      return context.redirect(auth.successRedirectPath)
+      const redirect = new URL(auth.successRedirectPath, context.req.url)
+      redirect.searchParams.set('login', 'github')
+      return context.redirect(redirect.toString())
     },
   )
   .post(
     '/logout',
-    requireAuth,
     describeRoute({
       tags: [OpenApiTags.Auth],
       summary: '退出登录',

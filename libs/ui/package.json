@@ -1,0 +1,55 @@
+{
+  "name": "@newsnow/ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "@newsnow/ui",
+  "homepage": "https://github.com/oyolincc/fork-newsnow#readme",
+  "bugs": {
+    "url": "https://github.com/oyolincc/fork-newsnow/issues"
+  },
+  "license": "MIT",
+  "author": "oyolincc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyolincc/fork-newsnow.git",
+    "directory": "libs/ui"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "vp run build"
+  },
+  "dependencies": {
+    "@ark-ui/react": "catalog:frontend",
+    "lucide-react": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@oyolincc/dev-config": "catalog:",
+    "@pandacss/dev": "catalog:frontend",
+    "@pandacss/preset-base": "catalog:frontend",
+    "@pandacss/preset-panda": "catalog:frontend",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}

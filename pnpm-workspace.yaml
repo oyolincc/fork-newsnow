@@ -63,6 +63,11 @@ catalogs:
     'react': '19.2.7'
     'react-dom': '19.2.7'
     'tailwindcss': '^4.3.3'
+    '@pandacss/dev': 2.2.0
+    '@pandacss/preset-base': 2.2.0
+    '@pandacss/preset-panda': 2.2.0
+    '@ark-ui/react': ^5.39.3
+    lucide-react: ^1.55.0
   db:
     '@types/better-sqlite3': '^7.6.13'
     'better-sqlite3': '^12.11.1'
@@ -79,6 +84,7 @@ peerDependencyRules:
     'vite': '*'
 
 allowBuilds:
+  '@parcel/watcher': true
   'better-sqlite3': true
   'esbuild': true
   'workerd': true

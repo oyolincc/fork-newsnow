@@ -36,3 +36,6 @@ db-data
 !.vscode/
 !.vscode/settings.json
 !.vscode/extensions.json
+
+# Panda
+styled-system

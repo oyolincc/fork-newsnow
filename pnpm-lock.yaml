@@ -29,8 +29,8 @@ catalogs:
       specifier: 1.62.5
       version: 1.62.5
     '@oyolincc/cli':
-      specifier: 2.1.3
-      version: 2.1.3
+      specifier: 2.1.4
+      version: 2.1.4
     '@oyolincc/dev-config':
       specifier: 0.1.1
       version: 0.1.1
@@ -191,7 +191,7 @@ importers:
         version: 2.27.12
       '@oyolincc/cli':
         specifier: 'catalog:'
-        version: 2.1.3(@types/node@24.19.2)(typescript@7.0.2)
+        version: 2.1.4(@types/node@24.19.2)(typescript@7.0.2)
       '@oyolincc/dev-config':
         specifier: 'catalog:'
         version: 0.1.1
@@ -346,7 +346,7 @@ importers:
         version: 1.62.5(@types/node@24.19.2)(@voidzero-dev/vite-plus-core@1.1.0(@types/node@24.19.2)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.21.0)(typescript@7.0.2)(yaml@2.9.1))(wrangler@4.147.0(@types/node@24.19.2))
       '@oyolincc/cli':
         specifier: 'catalog:'
-        version: 2.1.3(@types/node@24.19.2)(typescript@7.0.2)
+        version: 2.1.4(@types/node@24.19.2)(typescript@7.0.2)
       '@oyolincc/dev-config':
         specifier: 'catalog:'
         version: 0.1.1
@@ -407,7 +407,7 @@ importers:
     devDependencies:
       '@oyolincc/cli':
         specifier: 'catalog:'
-        version: 2.1.3(@types/node@24.19.2)(typescript@7.0.2)
+        version: 2.1.4(@types/node@24.19.2)(typescript@7.0.2)
       '@oyolincc/dev-config':
         specifier: 'catalog:'
         version: 0.1.1
@@ -1810,12 +1810,12 @@ packages:
     resolution: {integrity: sha512-S0uyoxakDINJ4DPgqxGlEEvrdSMeQb7Z2lKVjxoY2gwsbZbfg2Xr8Klfeo5ZeraHmmdBCELFUHkSe6KEmBpMvg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@oyolincc/cli@2.1.3':
-    resolution: {integrity: sha512-zuqOL78+oZl4nsJopxgEh+N2+TreAag2EmNSmCmxPyK7u6c6fo5+FWb5/9pa+Nz2GQKtTRJVQjfy4triztTO5g==}
+  '@oyolincc/cli@2.1.4':
+    resolution: {integrity: sha512-wCu4GBGa57d3/2J0Zol+ELG+hxpcBb65CaFLmPGozdtHY65xUmfLNMkgBwAnc0Jwd4+aiFEo7oXg2Jt2TktcYA==}
     hasBin: true
 
-  '@oyolincc/code-gen@0.2.2':
-    resolution: {integrity: sha512-86f6MLVKy+eQcyKCxCvAKMHheZDdzfwXQRnR4ITqImW+4/dg1rg0Nkp8Z+0eKpiNmCisA+b0iEjj7Bp/rVGgAg==}
+  '@oyolincc/code-gen@0.3.0':
+    resolution: {integrity: sha512-chL1Sq9QHaEzvIioxoWLNtl9mw6DQos/qlFualQXLhiMSoz7wR0dKJEzLWxHU36Q6dOFE4zI7cOSuRw4FsZJQQ==}
 
   '@oyolincc/dev-config@0.1.1':
     resolution: {integrity: sha512-rwHb4XWmXoNxe73PKukSrx0ahfn0d/Bxm0gTItwZB4DJn/6cpSSucv9X2Z7RLz3FsB9gAF83hdorOeO8arX0lQ==}
@@ -6108,9 +6108,9 @@ snapshots:
 
   '@oxlint/plugins@1.79.0': {}
 
-  '@oyolincc/cli@2.1.3(@types/node@24.19.2)(typescript@7.0.2)':
+  '@oyolincc/cli@2.1.4(@types/node@24.19.2)(typescript@7.0.2)':
     dependencies:
-      '@oyolincc/code-gen': 0.2.2(@types/node@24.19.2)(typescript@7.0.2)
+      '@oyolincc/code-gen': 0.3.0(@types/node@24.19.2)(typescript@7.0.2)
       '@oyolincc/env-loader': 0.2.0(typescript@7.0.2)
       commander: 14.0.3
       cross-spawn: 7.0.6
@@ -6118,7 +6118,7 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@oyolincc/code-gen@0.2.2(@types/node@24.19.2)(typescript@7.0.2)':
+  '@oyolincc/code-gen@0.3.0(@types/node@24.19.2)(typescript@7.0.2)':
     dependencies:
       '@oyolincc/kit': 1.2.0
       change-case: 5.4.4
@@ -6719,7 +6719,7 @@ snapshots:
   '@types/liftoff@4.0.3':
     dependencies:
       '@types/fined': 1.1.5
-      '@types/node': 24.19.2
+      '@types/node': 26.6.5
 
   '@types/node@12.20.55': {}
 
@@ -6745,7 +6745,7 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 24.19.2
+      '@types/node': 26.6.5
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true

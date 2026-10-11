@@ -1,0 +1,42 @@
+{
+  "name": "@newsnow/db",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./sqlite/d1-client": "./dist/sqlite/d1-client.mjs",
+    "./sqlite/schema": "./dist/sqlite/schema.mjs",
+    "./sqlite/sqlite": "./dist/sqlite/sqlite.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "sqlite:export": "oyo env sqlite -- drizzle-kit export --config=drizzle-kit/sqlite.config.ts",
+    "dev:sqlite:push": "oyo env sqlite -- drizzle-kit push --config=drizzle-kit/sqlite.config.ts",
+    "dev:sqlite:gen": "oyo env sqlite -- drizzle-kit generate --config=drizzle-kit/sqlite.config.ts",
+    "dev:sqlite:migrate": "oyo env sqlite -- drizzle-kit migrate --config=drizzle-kit/sqlite.config.ts",
+    "dev:d1:gen": "oyo env sqlite-d1 -- drizzle-kit generate --config=drizzle-kit/sqlite-d1.config.ts",
+    "dev:d1:migrate": "oyo env sqlite-d1 -- drizzle-kit migrate --config=drizzle-kit/sqlite-d1.config.ts"
+  },
+  "dependencies": {
+    "@newsnow/definition": "workspace:*",
+    "better-sqlite3": "catalog:db",
+    "drizzle-orm": "catalog:db"
+  },
+  "devDependencies": {
+    "@oyolincc/cli": "catalog:",
+    "@oyolincc/dev-config": "catalog:",
+    "@types/better-sqlite3": "catalog:db",
+    "@types/node": "catalog:",
+    "drizzle-kit": "catalog:db",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

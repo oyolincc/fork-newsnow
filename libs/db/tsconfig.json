@@ -1,0 +1,10 @@
+{
+  "extends": "@oyolincc/dev-config/tsconfig.bundler.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "files": [],
+  "include": ["src", "drizzle-kit", "./*.ts", "./*.mts"]
+}

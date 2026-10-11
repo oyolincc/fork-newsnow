@@ -1,0 +1,17 @@
+{
+  "env": {
+    "dir": "./envs/",
+    "presets": {
+      "server": [".env.server", ".env.sqlite"],
+      "sqlite": [".env.sqlite"],
+      "sqlite-d1": [".env.sqlite-d1"]
+    }
+  },
+  "codeGenerator": {
+    "root": ".",
+    "scope": "@newsnow",
+    "author": "oyolincc",
+    "gitUrlBase": "https://github.com/oyolincc/fork-newsnow",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "@oyolincc/dev-config/tsconfig.frontend.json",
+  "compilerOptions": {
+    "types": ["./worker-configuration.d.ts"],
+    "jsx": "react-jsx",
+    "paths": {
+      "#/*": ["./frontend/*"],
+      "@/*": ["./nitro/*"]
+    }
+  },
+  "files": [],
+  "include": ["frontend", "backend", "nitro", "./*.ts", "./*.mts"]
+}

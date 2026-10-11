@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "command": "IS_OVERRIDE=1 pnpm -C libs/code-gen pkg-gen",
+      "name": "newsnow-ts",
+      "request": "launch",
+      // "skipFiles": [
+      //   "<node_internals>/**"
+      // ],
+      "sourceMaps": true,
+      "type": "node-terminal"
+    },
+    {
+      "command": "pnpm -C apps/server dev:node-chain",
+      "name": "newsnow-server",
+      "request": "launch",
+      "sourceMaps": true,
+      "type": "node-terminal"
+    },
+    {
+      "command": "pnpm -C apps/stack dev:node",
+      "name": "newsnow-stack",
+      "request": "launch",
+      "sourceMaps": true,
+      "type": "node-terminal"
+    },
+    {
+      "name": "Attach to process",
+      "port": 19230,
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ],
+  "version": "0.2.0"
+}

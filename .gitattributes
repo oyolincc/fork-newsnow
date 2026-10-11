@@ -1,0 +1,39 @@
+# 自动决定文件是文本还是二进制
+* text=auto
+
+# 或者，更推荐的，保持工作区也是LF，避免转换麻烦，让编辑器处理显示
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.json text eol=lf
+*.vue text eol=lf
+*.md text eol=lf
+*.hbs text eol=lf
+
+# 对于必须保持LF的文件 (如shell脚本)
+*.sh text eol=lf
+
+# 对于必须保持CRLF的文件 (如windows批处理脚本)
+*.bat text eol=crlf
+
+# 对于二进制文件，明确指定，防止Git错误处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary
+*.otf binary
+*.pdf binary
+*.zip binary
+*.gz binary

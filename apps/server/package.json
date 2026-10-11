@@ -1,0 +1,65 @@
+{
+  "name": "@newsnow/server",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./nodejs": "./dist/nodejsEntry.mjs",
+    "./cloudflare": "./dist/cloudflareEntry.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "pnpm dev:node",
+    "build": "pnpm build:node",
+    "dev:node-chain": "turbo watch dev:node --filter=@newsnow/server",
+    "dev:node": "concurrently -k -n dev,pack -c blue,green \"vp dev\" \"VITE_PUBLIC_DEV_SERVE=1 vp pack --watch\"",
+    "dev:cloudflare-chain": "turbo watch dev:cloudflare --filter=@newsnow/server",
+    "dev:cloudflare": "wrangler dev --config wrangler.jsonc --persist-to ../../.wrangler/state",
+    "db:migrate:cloudflare:local": "wrangler d1 migrations apply DB --local --config wrangler.jsonc --persist-to ../../.wrangler/state",
+    "build:node-chain": "turbo build:node --filter=@newsnow/server",
+    "build:node": "vp pack",
+    "cf:typegen": "wrangler types --config wrangler.jsonc",
+    "cf:typecheck": "wrangler types --config wrangler.jsonc --check",
+    "test": "vp test",
+    "check": "vp check"
+  },
+  "dependencies": {
+    "@hono/node-server": "catalog:server",
+    "@hono/standard-validator": "catalog:server",
+    "@hono/swagger-ui": "catalog:server",
+    "@newsnow/db": "workspace:*",
+    "@newsnow/definition": "workspace:*",
+    "@valibot/to-json-schema": "catalog:server",
+    "change-case": "catalog:shared",
+    "defu": "catalog:shared",
+    "dotenv": "catalog:",
+    "drizzle-orm": "catalog:db",
+    "hono": "catalog:server",
+    "hono-openapi": "catalog:server",
+    "hono-pino": "catalog:server",
+    "hono-problem-details": "catalog:server",
+    "ky": "catalog:shared",
+    "pino": "catalog:server",
+    "pino-roll": "catalog:server",
+    "piscina": "catalog:server",
+    "string-template": "catalog:shared",
+    "valibot": "catalog:shared",
+    "yaml": "catalog:shared"
+  },
+  "devDependencies": {
+    "@hono/vite-dev-server": "catalog:server",
+    "@oyolincc/dev-config": "catalog:",
+    "@oyolincc/env-loader": "catalog:",
+    "@types/node": "catalog:",
+    "@types/string-template": "catalog:shared",
+    "concurrently": "catalog:",
+    "pino-pretty": "catalog:server",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:",
+    "wrangler": "catalog:"
+  }
+}

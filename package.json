@@ -1,0 +1,26 @@
+{
+  "name": "newsnow",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "vp config",
+    "cf:typegen": "pnpm -C apps/server cf:typegen && pnpm -C apps/stack cf:typegen",
+    "changeset": "vp exec changeset",
+    "build": "pnpm cf:typegen && turbo build",
+    "build:libs": "turbo build --filter=!@newsnow/stack --filter=!@newsnow/server"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "catalog:",
+    "@changesets/cli": "catalog:",
+    "@oyolincc/cli": "catalog:",
+    "@oyolincc/dev-config": "catalog:",
+    "@types/node": "catalog:",
+    "tsx": "catalog:",
+    "turbo": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@11.25.0"
+}

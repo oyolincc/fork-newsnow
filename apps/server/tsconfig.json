@@ -1,0 +1,17 @@
+{
+  "extends": "@oyolincc/dev-config/tsconfig.bundler.json",
+  "compilerOptions": {
+    "types": ["node", "./worker-configuration.d.ts"],
+    "verbatimModuleSyntax": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@error-categories": ["./src/shared/errors/defs/index.ts"]
+    }
+  },
+  "files": [],
+  "include": ["src", "./*.ts", "./*.mts"],
+  "exclude": ["node_modules"]
+}

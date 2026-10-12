@@ -1,4 +1,6 @@
+import { Button, Field, Input } from '@newsnow/ui'
 import type { FormEvent } from 'react'
+import { css } from 'styled-system/css'
 
 interface ExampleFormProps {
   message: string
@@ -23,23 +25,34 @@ export function ExampleForm({
   }
 
   return (
-    <form className="flex gap-2" onSubmit={submit}>
-      <input
-        className="min-w-0 flex-1 rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
-        value={message}
-        onChange={(event) => onMessageChange(event.target.value)}
-        placeholder="Message"
-      />
-      <button className="rounded bg-blue-600 px-4 py-2" disabled={!message.trim() || saving}>
+    <form
+      className={css({ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', gap: '3' })}
+      onSubmit={submit}>
+      <Field.Root
+        className={css({
+          flex: '1',
+          minW: '0',
+          width: { base: 'full', sm: 'auto' },
+          flexBasis: { base: 'full', sm: '0' },
+        })}>
+        <Field.Label>Message</Field.Label>
+        <Input
+          value={message}
+          onChange={(event) => onMessageChange(event.target.value)}
+          placeholder="Message"
+        />
+      </Field.Root>
+      <Button type="submit" variant="solid" loading={saving} disabled={!message.trim() || saving}>
         Save
-      </button>
-      <button
-        className="rounded bg-emerald-600 px-4 py-2"
+      </Button>
+      <Button
         type="button"
+        variant="outline"
+        loading={processing}
         disabled={!message.trim() || processing}
         onClick={onProcess}>
         Process
-      </button>
+      </Button>
     </form>
   )
 }

@@ -1,6 +1,11 @@
 import { defineKeyframes } from '@pandacss/dev'
 
 export const keyframes = defineKeyframes({
+  'circular-progress': {
+    '0%': { strokeDasharray: '1, 400', strokeDashoffset: '0' },
+    '50%': { strokeDasharray: '400, 400', strokeDashoffset: '-100%' },
+    '100%': { strokeDasharray: '400, 400', strokeDashoffset: '-260%' },
+  },
   // collapse
   'expand-height': {
     from: { height: '0' },
@@ -120,6 +125,33 @@ export const keyframes = defineKeyframes({
     to: {
       insetInlineStart: 'var(--animate-to-x)',
       insetBlockStart: 'var(--animate-to-y)',
+    },
+  },
+
+  spin: {
+    to: {
+      transform: 'rotate(360deg)',
+    },
+  },
+  ping: {
+    '75%, 100%': {
+      transform: 'scale(2)',
+      opacity: '0',
+    },
+  },
+  pulse: {
+    '50%': {
+      opacity: '.5',
+    },
+  },
+  bounce: {
+    '0%, 100%': {
+      transform: 'translateY(-25%)',
+      animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+    },
+    '50%': {
+      transform: 'none',
+      animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
     },
   },
 })

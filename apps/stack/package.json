@@ -23,11 +23,13 @@
     "cf:typecheck": "wrangler types --check",
     "generate-routes": "tsr generate",
     "test": "vp test",
-    "check": "vp check"
+    "check": "pnpm codegen && vp check",
+    "codegen": "panda codegen"
   },
   "dependencies": {
     "@newsnow/definition": "workspace:*",
     "@newsnow/server": "workspace:*",
+    "@newsnow/ui": "workspace:*",
     "@tanstack/react-query": "catalog:frontend",
     "@tanstack/react-router": "catalog:frontend",
     "@tanstack/react-start": "catalog:frontend",
@@ -41,8 +43,11 @@
     "@cloudflare/vite-plugin": "catalog:",
     "@oyolincc/cli": "catalog:",
     "@oyolincc/dev-config": "catalog:",
+    "@pandacss/dev": "catalog:frontend",
+    "@pandacss/preset-base": "catalog:frontend",
+    "@pandacss/preset-panda": "catalog:frontend",
+    "@pandacss/vite": "catalog:frontend",
     "@rollup/pluginutils": "catalog:",
-    "@tailwindcss/vite": "catalog:frontend",
     "@tanstack/react-query-devtools": "catalog:frontend",
     "@tanstack/react-router-devtools": "catalog:frontend",
     "@tanstack/router-cli": "catalog:frontend",
@@ -51,7 +56,6 @@
     "@types/react-dom": "catalog:frontend",
     "@vitejs/plugin-react": "catalog:",
     "fast-glob": "catalog:",
-    "tailwindcss": "catalog:frontend",
     "typescript": "catalog:",
     "vite-plus": "catalog:",
     "wrangler": "catalog:"

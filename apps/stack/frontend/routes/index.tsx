@@ -1,3 +1,5 @@
+import { Heading, Text } from '@newsnow/ui'
+import { css } from 'styled-system/css'
 import { createFileRoute } from '@tanstack/react-router'
 import { useAtom } from 'jotai'
 import { ErrorMessage } from '#/components/general/ErrorMessage'
@@ -36,8 +38,10 @@ function Home() {
       <PageContainer>
         <Page>
           <header>
-            <h1 className="text-3xl font-bold">Example workspace</h1>
-            <p className="text-zinc-400">Nitro mounts the independent Hono server under /api.</p>
+            <Heading as="h1" size="3xl">
+              Example workspace
+            </Heading>
+            <Text color="fg.muted">Nitro mounts the independent Hono server under /api.</Text>
           </header>
           <ExampleForm
             message={message}
@@ -48,7 +52,13 @@ function Home() {
             onProcess={() => processExample({ message })}
           />
           {processedExample && (
-            <pre className="rounded bg-zinc-900 p-4">
+            <pre
+              className={css({
+                borderRadius: 'sm',
+                bg: 'gray.surface.bg',
+                p: '4',
+                overflowX: 'auto',
+              })}>
               {JSON.stringify(processedExample, null, 2)}
             </pre>
           )}

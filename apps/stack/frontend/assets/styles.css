@@ -1,0 +1,6 @@
+/* 已完成迁移，采用 Panda 默认层序；原 Tailwind 层序留作迁移记录。
+来源	默认层
+Panda	reset, base, tokens, recipes, utilities
+Tailwind	theme, base, components, utilities
+*/
+@layer reset, base, tokens, recipes, utilities;

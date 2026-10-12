@@ -10,7 +10,7 @@ import {
 } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { Provider as JotaiProvider, type createStore } from 'jotai'
-import appCss from '../styles.css?url'
+import appCss from '../assets/styles.css?url'
 
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient

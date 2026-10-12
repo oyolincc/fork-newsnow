@@ -37,4 +37,7 @@ export const zIndex = defineTokens.zIndex({
   tooltip: {
     value: 1800,
   },
+  max: {
+    value: 99999999,
+  },
 })

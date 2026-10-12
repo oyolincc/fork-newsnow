@@ -1,17 +1,82 @@
 import { defineTextStyles } from '@pandacss/dev'
 
 export const textStyles = defineTextStyles({
-  xs: { value: { fontSize: 'xs', lineHeight: '1.125rem' } },
-  sm: { value: { fontSize: 'sm', lineHeight: '1.25rem' } },
-  md: { value: { fontSize: 'md', lineHeight: '1.5rem' } },
-  lg: { value: { fontSize: 'lg', lineHeight: '1.75rem' } },
-  xl: { value: { fontSize: 'xl', lineHeight: '1.875rem' } },
-  '2xl': { value: { fontSize: '2xl', lineHeight: '2rem' } },
-  '3xl': { value: { fontSize: '3xl', lineHeight: '2.375rem' } },
-  '4xl': { value: { fontSize: '4xl', lineHeight: '2.75rem', letterSpacing: '-0.02em' } },
-  '5xl': { value: { fontSize: '5xl', lineHeight: '3.75rem', letterSpacing: '-0.02em' } },
-  '6xl': { value: { fontSize: '6xl', lineHeight: '4.5rem', letterSpacing: '-0.02em' } },
-  '7xl': { value: { fontSize: '7xl', lineHeight: '5.75rem', letterSpacing: '-0.02em' } },
-
-  label: { value: { fontSize: 'sm', lineHeight: '1.25rem', fontWeight: 'medium' } },
+  xs: {
+    value: {
+      fontSize: '{fontSizes.xs}',
+      lineHeight: '{lineHeights.xs}',
+    },
+  },
+  sm: {
+    value: {
+      fontSize: '{fontSizes.sm}',
+      lineHeight: '{lineHeights.sm}',
+    },
+  },
+  md: {
+    value: {
+      fontSize: '{fontSizes.md}',
+      lineHeight: '{lineHeights.md}',
+    },
+  },
+  lg: {
+    value: {
+      fontSize: '{fontSizes.lg}',
+      lineHeight: '{lineHeights.lg}',
+    },
+  },
+  xl: {
+    value: {
+      fontSize: '{fontSizes.xl}',
+      lineHeight: '{lineHeights.xl}',
+    },
+  },
+  '2xl': {
+    value: {
+      fontSize: '{fontSizes.2xl}',
+      lineHeight: '{lineHeights.2xl}',
+    },
+  },
+  '3xl': {
+    value: {
+      fontSize: '{fontSizes.3xl}',
+      lineHeight: '{lineHeights.3xl}',
+    },
+  },
+  '4xl': {
+    value: {
+      fontSize: '{fontSizes.4xl}',
+      lineHeight: '{lineHeights.4xl}',
+    },
+  },
+  '5xl': {
+    value: {
+      fontSize: '{fontSizes.5xl}',
+      lineHeight: '{lineHeights.5xl}',
+    },
+  },
+  '6xl': {
+    value: {
+      fontSize: '{fontSizes.6xl}',
+      lineHeight: '{lineHeights.6xl}',
+    },
+  },
+  '7xl': {
+    value: {
+      fontSize: '{fontSizes.7xl}',
+      lineHeight: '{lineHeights.7xl}',
+    },
+  },
+  '8xl': {
+    value: {
+      fontSize: '{fontSizes.8xl}',
+      lineHeight: '{lineHeights.8xl}',
+    },
+  },
+  '9xl': {
+    value: {
+      fontSize: '{fontSizes.9xl}',
+      lineHeight: '{lineHeights.9xl}',
+    },
+  },
 })

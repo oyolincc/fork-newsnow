@@ -1,0 +1,29 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "inputs": ["$TURBO_EXTENDS$", "$TURBO_ROOT$/tooling/bundler-warnings.ts"],
+      "outputs": ["dist/**", "styled-system/**"]
+    },
+    "build:codegen": {
+      "inputs": ["panda.config.ts", "src/theme/**", "tsconfig.json"],
+      "outputs": ["styled-system/**"]
+    },
+    "build:react": {
+      "dependsOn": ["build:codegen", "^build"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!**/*.md",
+        "!src/theme/**",
+        "!panda.config.ts",
+        "$TURBO_ROOT$/tooling/bundler-warnings.ts"
+      ],
+      "outputs": ["dist/react/**"]
+    },
+    "build:dev": {
+      "dependsOn": ["build:react"],
+      "inputs": ["package.json"],
+      "outputs": ["dist/panda/**"]
+    }
+  }
+}

@@ -1,5 +1,8 @@
 import type { ReactNode } from 'react'
+import { css } from 'styled-system/css'
 
 export function PageContainer({ children }: { children: ReactNode }) {
-  return <main className="mx-auto max-w-2xl p-8">{children}</main>
+  return (
+    <main className={css({ mx: 'auto', maxW: '2xl', p: { base: '4', md: '8' } })}>{children}</main>
+  )
 }

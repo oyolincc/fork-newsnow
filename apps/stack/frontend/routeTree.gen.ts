@@ -10,11 +10,31 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as UiRouteRouteImport } from './routes/ui/route'
 import { Route as ApiSplatRouteImport } from './routes/api/$'
+import { Route as UiIndexRouteImport } from './routes/ui/index'
+import { Route as UiApiRouteImport } from './routes/ui/api'
+import { Route as UiCollectionsRouteImport } from './routes/ui/collections'
+import { Route as UiColorRouteImport } from './routes/ui/color'
+import { Route as UiDataRouteImport } from './routes/ui/data'
+import { Route as UiDateRouteImport } from './routes/ui/date'
+import { Route as UiDisclosureRouteImport } from './routes/ui/disclosure'
+import { Route as UiDisplayRouteImport } from './routes/ui/display'
+import { Route as UiFormsRouteImport } from './routes/ui/forms'
+import { Route as UiLayoutRouteImport } from './routes/ui/layout'
+import { Route as UiOverlayManagerRouteImport } from './routes/ui/overlay-manager'
+import { Route as UiOverlaysRouteImport } from './routes/ui/overlays'
+import { Route as UiTimelineRouteImport } from './routes/ui/timeline'
+import { Route as UiTreeRouteImport } from './routes/ui/tree'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UiRouteRoute = UiRouteRouteImport.update({
+  id: '/ui',
+  path: '/ui',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiSplatRoute = ApiSplatRouteImport.update({
@@ -22,30 +42,196 @@ const ApiSplatRoute = ApiSplatRouteImport.update({
   path: '/api/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UiIndexRoute = UiIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiApiRoute = UiApiRouteImport.update({
+  id: '/api',
+  path: '/api',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiCollectionsRoute = UiCollectionsRouteImport.update({
+  id: '/collections',
+  path: '/collections',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiColorRoute = UiColorRouteImport.update({
+  id: '/color',
+  path: '/color',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiDataRoute = UiDataRouteImport.update({
+  id: '/data',
+  path: '/data',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiDateRoute = UiDateRouteImport.update({
+  id: '/date',
+  path: '/date',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiDisclosureRoute = UiDisclosureRouteImport.update({
+  id: '/disclosure',
+  path: '/disclosure',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiDisplayRoute = UiDisplayRouteImport.update({
+  id: '/display',
+  path: '/display',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiFormsRoute = UiFormsRouteImport.update({
+  id: '/forms',
+  path: '/forms',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiLayoutRoute = UiLayoutRouteImport.update({
+  id: '/layout',
+  path: '/layout',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiOverlayManagerRoute = UiOverlayManagerRouteImport.update({
+  id: '/overlay-manager',
+  path: '/overlay-manager',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiOverlaysRoute = UiOverlaysRouteImport.update({
+  id: '/overlays',
+  path: '/overlays',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiTimelineRoute = UiTimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
+  getParentRoute: () => UiRouteRoute,
+} as any)
+const UiTreeRoute = UiTreeRouteImport.update({
+  id: '/tree',
+  path: '/tree',
+  getParentRoute: () => UiRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ui': typeof UiRouteRouteWithChildren
   '/api/$': typeof ApiSplatRoute
+  '/ui/api': typeof UiApiRoute
+  '/ui/collections': typeof UiCollectionsRoute
+  '/ui/color': typeof UiColorRoute
+  '/ui/data': typeof UiDataRoute
+  '/ui/date': typeof UiDateRoute
+  '/ui/disclosure': typeof UiDisclosureRoute
+  '/ui/display': typeof UiDisplayRoute
+  '/ui/forms': typeof UiFormsRoute
+  '/ui/layout': typeof UiLayoutRoute
+  '/ui/overlay-manager': typeof UiOverlayManagerRoute
+  '/ui/overlays': typeof UiOverlaysRoute
+  '/ui/timeline': typeof UiTimelineRoute
+  '/ui/tree': typeof UiTreeRoute
+  '/ui/': typeof UiIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/api/$': typeof ApiSplatRoute
+  '/ui/api': typeof UiApiRoute
+  '/ui/collections': typeof UiCollectionsRoute
+  '/ui/color': typeof UiColorRoute
+  '/ui/data': typeof UiDataRoute
+  '/ui/date': typeof UiDateRoute
+  '/ui/disclosure': typeof UiDisclosureRoute
+  '/ui/display': typeof UiDisplayRoute
+  '/ui/forms': typeof UiFormsRoute
+  '/ui/layout': typeof UiLayoutRoute
+  '/ui/overlay-manager': typeof UiOverlayManagerRoute
+  '/ui/overlays': typeof UiOverlaysRoute
+  '/ui/timeline': typeof UiTimelineRoute
+  '/ui/tree': typeof UiTreeRoute
+  '/ui': typeof UiIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ui': typeof UiRouteRouteWithChildren
   '/api/$': typeof ApiSplatRoute
+  '/ui/api': typeof UiApiRoute
+  '/ui/collections': typeof UiCollectionsRoute
+  '/ui/color': typeof UiColorRoute
+  '/ui/data': typeof UiDataRoute
+  '/ui/date': typeof UiDateRoute
+  '/ui/disclosure': typeof UiDisclosureRoute
+  '/ui/display': typeof UiDisplayRoute
+  '/ui/forms': typeof UiFormsRoute
+  '/ui/layout': typeof UiLayoutRoute
+  '/ui/overlay-manager': typeof UiOverlayManagerRoute
+  '/ui/overlays': typeof UiOverlaysRoute
+  '/ui/timeline': typeof UiTimelineRoute
+  '/ui/tree': typeof UiTreeRoute
+  '/ui/': typeof UiIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/$'
+  fullPaths:
+    | '/'
+    | '/ui'
+    | '/api/$'
+    | '/ui/api'
+    | '/ui/collections'
+    | '/ui/color'
+    | '/ui/data'
+    | '/ui/date'
+    | '/ui/disclosure'
+    | '/ui/display'
+    | '/ui/forms'
+    | '/ui/layout'
+    | '/ui/overlay-manager'
+    | '/ui/overlays'
+    | '/ui/timeline'
+    | '/ui/tree'
+    | '/ui/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/$'
-  id: '__root__' | '/' | '/api/$'
+  to:
+    | '/'
+    | '/api/$'
+    | '/ui/api'
+    | '/ui/collections'
+    | '/ui/color'
+    | '/ui/data'
+    | '/ui/date'
+    | '/ui/disclosure'
+    | '/ui/display'
+    | '/ui/forms'
+    | '/ui/layout'
+    | '/ui/overlay-manager'
+    | '/ui/overlays'
+    | '/ui/timeline'
+    | '/ui/tree'
+    | '/ui'
+  id:
+    | '__root__'
+    | '/'
+    | '/ui'
+    | '/api/$'
+    | '/ui/api'
+    | '/ui/collections'
+    | '/ui/color'
+    | '/ui/data'
+    | '/ui/date'
+    | '/ui/disclosure'
+    | '/ui/display'
+    | '/ui/forms'
+    | '/ui/layout'
+    | '/ui/overlay-manager'
+    | '/ui/overlays'
+    | '/ui/timeline'
+    | '/ui/tree'
+    | '/ui/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  UiRouteRoute: typeof UiRouteRouteWithChildren
   ApiSplatRoute: typeof ApiSplatRoute
 }
 
@@ -58,6 +244,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ui': {
+      id: '/ui'
+      path: '/ui'
+      fullPath: '/ui'
+      preLoaderRoute: typeof UiRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/$': {
       id: '/api/$'
       path: '/api/$'
@@ -65,11 +258,147 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ui/': {
+      id: '/ui/'
+      path: '/'
+      fullPath: '/ui/'
+      preLoaderRoute: typeof UiIndexRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/api': {
+      id: '/ui/api'
+      path: '/api'
+      fullPath: '/ui/api'
+      preLoaderRoute: typeof UiApiRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/collections': {
+      id: '/ui/collections'
+      path: '/collections'
+      fullPath: '/ui/collections'
+      preLoaderRoute: typeof UiCollectionsRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/color': {
+      id: '/ui/color'
+      path: '/color'
+      fullPath: '/ui/color'
+      preLoaderRoute: typeof UiColorRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/data': {
+      id: '/ui/data'
+      path: '/data'
+      fullPath: '/ui/data'
+      preLoaderRoute: typeof UiDataRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/date': {
+      id: '/ui/date'
+      path: '/date'
+      fullPath: '/ui/date'
+      preLoaderRoute: typeof UiDateRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/disclosure': {
+      id: '/ui/disclosure'
+      path: '/disclosure'
+      fullPath: '/ui/disclosure'
+      preLoaderRoute: typeof UiDisclosureRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/display': {
+      id: '/ui/display'
+      path: '/display'
+      fullPath: '/ui/display'
+      preLoaderRoute: typeof UiDisplayRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/forms': {
+      id: '/ui/forms'
+      path: '/forms'
+      fullPath: '/ui/forms'
+      preLoaderRoute: typeof UiFormsRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/layout': {
+      id: '/ui/layout'
+      path: '/layout'
+      fullPath: '/ui/layout'
+      preLoaderRoute: typeof UiLayoutRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/overlay-manager': {
+      id: '/ui/overlay-manager'
+      path: '/overlay-manager'
+      fullPath: '/ui/overlay-manager'
+      preLoaderRoute: typeof UiOverlayManagerRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/overlays': {
+      id: '/ui/overlays'
+      path: '/overlays'
+      fullPath: '/ui/overlays'
+      preLoaderRoute: typeof UiOverlaysRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/timeline': {
+      id: '/ui/timeline'
+      path: '/timeline'
+      fullPath: '/ui/timeline'
+      preLoaderRoute: typeof UiTimelineRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
+    '/ui/tree': {
+      id: '/ui/tree'
+      path: '/tree'
+      fullPath: '/ui/tree'
+      preLoaderRoute: typeof UiTreeRouteImport
+      parentRoute: typeof UiRouteRoute
+    }
   }
 }
 
+interface UiRouteRouteChildren {
+  UiApiRoute: typeof UiApiRoute
+  UiCollectionsRoute: typeof UiCollectionsRoute
+  UiColorRoute: typeof UiColorRoute
+  UiDataRoute: typeof UiDataRoute
+  UiDateRoute: typeof UiDateRoute
+  UiDisclosureRoute: typeof UiDisclosureRoute
+  UiDisplayRoute: typeof UiDisplayRoute
+  UiFormsRoute: typeof UiFormsRoute
+  UiLayoutRoute: typeof UiLayoutRoute
+  UiOverlayManagerRoute: typeof UiOverlayManagerRoute
+  UiOverlaysRoute: typeof UiOverlaysRoute
+  UiTimelineRoute: typeof UiTimelineRoute
+  UiTreeRoute: typeof UiTreeRoute
+  UiIndexRoute: typeof UiIndexRoute
+}
+
+const UiRouteRouteChildren: UiRouteRouteChildren = {
+  UiApiRoute: UiApiRoute,
+  UiCollectionsRoute: UiCollectionsRoute,
+  UiColorRoute: UiColorRoute,
+  UiDataRoute: UiDataRoute,
+  UiDateRoute: UiDateRoute,
+  UiDisclosureRoute: UiDisclosureRoute,
+  UiDisplayRoute: UiDisplayRoute,
+  UiFormsRoute: UiFormsRoute,
+  UiLayoutRoute: UiLayoutRoute,
+  UiOverlayManagerRoute: UiOverlayManagerRoute,
+  UiOverlaysRoute: UiOverlaysRoute,
+  UiTimelineRoute: UiTimelineRoute,
+  UiTreeRoute: UiTreeRoute,
+  UiIndexRoute: UiIndexRoute,
+}
+
+const UiRouteRouteWithChildren =
+  UiRouteRoute._addFileChildren(UiRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  UiRouteRoute: UiRouteRouteWithChildren,
   ApiSplatRoute: ApiSplatRoute,
 }
 export const routeTree = rootRouteImport

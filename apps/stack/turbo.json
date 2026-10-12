@@ -1,0 +1,20 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "dev:node": {
+      "dependsOn": ["^build:dev"]
+    },
+    "dev:cloudflare": {
+      "dependsOn": ["^build:dev"]
+    },
+    "build": {
+      "inputs": ["$TURBO_EXTENDS$", "$TURBO_ROOT$/tooling/bundler-warnings.ts"]
+    },
+    "build:node": {
+      "inputs": ["$TURBO_EXTENDS$", "$TURBO_ROOT$/tooling/bundler-warnings.ts"]
+    },
+    "build:cloudflare": {
+      "inputs": ["$TURBO_EXTENDS$", "$TURBO_ROOT$/tooling/bundler-warnings.ts"]
+    }
+  }
+}

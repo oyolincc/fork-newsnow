@@ -15,22 +15,81 @@
     "directory": "libs/ui"
   },
   "files": [
-    "dist"
+    "dist/react",
+    "dist/panda",
+    "styled-system"
   ],
   "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs",
-      "default": "./dist/index.mjs"
+      "types": "./dist/react/src/index.d.mts",
+      "import": "./dist/react/src/index.mjs",
+      "default": "./dist/react/src/index.mjs"
+    },
+    "./tooltip": {
+      "types": "./dist/react/src/Tooltip.d.mts",
+      "import": "./dist/react/src/Tooltip.mjs",
+      "default": "./dist/react/src/Tooltip.mjs"
+    },
+    "./panda/*": "./dist/panda/*",
+    "./css": {
+      "types": "./styled-system/css/index.d.ts",
+      "default": "./styled-system/css/index.js"
+    },
+    "./css/*": {
+      "types": "./styled-system/css/*.d.ts",
+      "default": "./styled-system/css/*.js"
+    },
+    "./recipes": {
+      "types": "./styled-system/recipes/index.d.ts",
+      "default": "./styled-system/recipes/index.js"
+    },
+    "./recipes/*": {
+      "types": "./styled-system/recipes/*.d.ts",
+      "default": "./styled-system/recipes/*.js"
+    },
+    "./patterns": {
+      "types": "./styled-system/patterns/index.d.ts",
+      "default": "./styled-system/patterns/index.js"
+    },
+    "./patterns/*": {
+      "types": "./styled-system/patterns/*.d.ts",
+      "default": "./styled-system/patterns/*.js"
+    },
+    "./jsx": {
+      "types": "./styled-system/jsx/index.d.ts",
+      "default": "./styled-system/jsx/index.js"
+    },
+    "./jsx/*": {
+      "types": "./styled-system/jsx/*.d.ts",
+      "default": "./styled-system/jsx/*.js"
+    },
+    "./tokens": {
+      "types": "./styled-system/tokens/index.d.ts",
+      "default": "./styled-system/tokens/index.js"
+    },
+    "./helpers": {
+      "types": "./styled-system/helpers.d.ts",
+      "default": "./styled-system/helpers.js"
+    },
+    "./types": {
+      "types": "./styled-system/types/index.d.ts"
     }
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "vp pack",
-    "dev": "vp pack --watch",
+    "build": "panda codegen --clean && vp pack && panda lib --files './react/**/*.{js,mjs}'",
+    "build:codegen": "panda codegen --clean",
+    "build:react": "vp pack",
+    "build:dev": "panda lib --files './react/**/*.{js,mjs}'",
+    "dev": "panda codegen && vp pack --watch",
+    "dev:codegen": "panda codegen --watch",
+    "dev:panda": "panda codegen && panda lib --watch --files './react/**/*.{js,mjs}'",
     "test": "vp test",
     "check": "vp check",
     "prepublishOnly": "vp run build"
@@ -43,13 +102,13 @@
     "@oyolincc/dev-config": "catalog:",
     "@pandacss/dev": "catalog:frontend",
     "@pandacss/preset-base": "catalog:frontend",
-    "@pandacss/preset-panda": "catalog:frontend",
     "@types/node": "catalog:",
     "@types/react": "catalog:frontend",
     "typescript": "catalog:",
     "vite-plus": "catalog:"
   },
   "peerDependencies": {
+    "@pandacss/dev": "^2.0.0",
     "react": ">=18",
     "react-dom": ">=18"
   }

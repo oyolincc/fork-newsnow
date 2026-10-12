@@ -45,6 +45,7 @@
     "@pandacss/preset-base": "catalog:frontend",
     "@pandacss/preset-panda": "catalog:frontend",
     "@types/node": "catalog:",
+    "@types/react": "catalog:frontend",
     "typescript": "catalog:",
     "vite-plus": "catalog:"
   },

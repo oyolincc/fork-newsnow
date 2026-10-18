@@ -4,7 +4,7 @@ import { Header } from './Header'
 
 export function AppLayout({ children }: { children: ReactNode }) {
   return (
-    <div className={css({ minHeight: 'screen', bg: 'bg.page', color: 'fg.default' })}>
+    <div className={css({ minHeight: 'screen', bg: 'gray.bg.page', color: 'gray.fg.default' })}>
       <Header />
       {children}
     </div>

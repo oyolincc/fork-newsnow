@@ -41,7 +41,7 @@ function Home() {
             <Heading as="h1" size="3xl">
               Example workspace
             </Heading>
-            <Text color="fg.muted">Nitro mounts the independent Hono server under /api.</Text>
+            <Text color="gray.fg.muted">Nitro mounts the independent Hono server under /api.</Text>
           </header>
           <ExampleForm
             message={message}
@@ -55,7 +55,7 @@ function Home() {
             <pre
               className={css({
                 borderRadius: 'sm',
-                bg: 'gray.surface.bg',
+                bg: 'gray.bg.surface',
                 p: '4',
                 overflowX: 'auto',
               })}>

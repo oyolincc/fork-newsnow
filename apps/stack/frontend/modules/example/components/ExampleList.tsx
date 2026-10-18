@@ -6,7 +6,12 @@ export function ExampleList({ examples }: { examples?: Example[] }) {
     <ul className={css({ display: 'grid', gap: '2' })}>
       {examples?.map((example) => (
         <li
-          className={css({ borderRadius: 'sm', borderWidth: 'px', borderColor: 'border', p: '3' })}
+          className={css({
+            borderRadius: 'sm',
+            borderWidth: 'px',
+            borderColor: 'gray.border.default',
+            p: '3',
+          })}
           key={example.id}>
           {example.message}
         </li>

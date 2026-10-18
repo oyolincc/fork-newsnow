@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 const appearance = {
-  borderRadius: 'sm',
+  borderRadius: 'xs',
   cursor: 'pointer',
   fontWeight: 'semibold',
   outline: '0',

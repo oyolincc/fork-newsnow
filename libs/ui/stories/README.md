@@ -16,6 +16,12 @@ Docs 容器按需加载，独立 Story 不提前加载文档界面；开发服�
 减少首次转换的瀑布等待。预热不减少请求数量。UI 与 Panda 生成代码保留源码模块和热更新，
 不强制预构建为大包；第三方依赖由 Storybook 的 Vite builder 自动发现并缓存预构建结果。
 
+Storybook 和 Stack 保持 Panda 默认的源码转换策略（`transform: false`），
+不为减少开发请求数量额外开启源码改写。是否启用转换，应依据实际加载、热更新或产物收益验证。
+Stack 通过 `designSystem` 自动注册样式入口，不将 `@newsnow/ui` 根入口配置为 `importMap.jsx`，
+防止 Stack 等 UI 组件被当成 Panda 原生 pattern 内联而丢失 `separator`、`asChild` 等行为。
+修改 Vite 配置后需重启开发服务。
+
 `storybook:check` 会生成这份运行时并检查 stories 与配置，不改写原有生成目录。
 Controls 在运行时选择参数，因此预览专用 Panda 配置预生成所有配方变体，
 以及面板提供的 gray、lime、red、green 配色；增加配色选项时需同步这份列表。
@@ -98,6 +104,6 @@ Toast 与命令式弹层在示例卸载时清理实例。
 PasswordInput 的 JSX 默认图标暂不支持自动参数提取，因此该 story 使用显式 argTypes。
 
 当前共 62 个组件族文件、163 个功能示例和 62 个自动文档入口。
-第四步再移除旧路由、关联入口和预热逻辑，并重新生成应用路由树。
-
-现有 `/ui` 验收页面在完整迁移并验证前继续保留。
+Stack 的旧 `/ui` 验收路由、示例文件和专用预热配置已移除，组件预览统一使用 Storybook。
+删除路由后，在 `apps/stack` 执行 `vp run generate-routes` 更新生成的路由树，随后执行
+`vp run check` 和 `vp test` 验证应用。

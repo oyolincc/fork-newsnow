@@ -56,9 +56,8 @@ export default defineConfig(() => {
     server: {
       port: 3000,
       warmup: {
-        // 预热临时 UI 验收页的转换；移除 routes/ui 后此 glob 自动不再匹配文件。
-        clientFiles: ['./frontend/router.tsx', './frontend/routes/ui/**/*.tsx'],
-        ssrFiles: ['./frontend/router.tsx', './frontend/routes/ui/**/*.tsx'],
+        clientFiles: ['./frontend/router.tsx'],
+        ssrFiles: ['./frontend/router.tsx'],
       },
     },
     preview: {
@@ -71,7 +70,9 @@ export default defineConfig(() => {
         '#server-runtime': path.resolve(import.meta.dirname, `./backend/${deployTarget}.ts`),
       },
     },
-    optimizeDeps: { include: ['@newsnow/definition/frontend'] },
+    optimizeDeps: {
+      include: ['@newsnow/definition/frontend', '@newsnow/ui'],
+    },
     build,
     plugins: lazyPlugins(async () => {
       const runtimePlugins =

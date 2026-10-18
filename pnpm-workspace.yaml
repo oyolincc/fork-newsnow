@@ -12,13 +12,17 @@ catalog:
   '@oyolincc/cli': '2.1.4'
   '@oyolincc/dev-config': '0.1.1'
   '@oyolincc/env-loader': '^0.2.0'
+  '@pandacss/vite': 2.2.0
   '@rollup/pluginutils': '^5.4.0'
   '@types/node': '^24'
+  '@types/react-dom': 19.2.3
   '@vitejs/plugin-react': '^6.0.3'
   'concurrently': '^10.0.5'
   'dotenv': '17.2.3'
   'fast-glob': '^3.3.3'
   'nitro': '3.0.260610-beta'
+  react: 19.2.7
+  react-dom: 19.2.7
   'tsx': '4.21.0'
   'turbo': '^2.9.14'
   'typescript': '7.0.2'
@@ -67,6 +71,9 @@ catalogs:
     '@pandacss/vite': 2.2.0
     '@ark-ui/react': ^5.39.3
     lucide-react: ^1.55.0
+    storybook: 10.6.2
+    '@storybook/react-vite': 10.6.2
+    '@storybook/addon-docs': 10.6.2
   db:
     '@types/better-sqlite3': '^7.6.13'
     'better-sqlite3': '^12.11.1'

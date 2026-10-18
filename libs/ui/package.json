@@ -92,6 +92,9 @@
     "dev:panda": "panda codegen && panda lib --watch --files './react/**/*.{js,mjs}'",
     "test": "vp test",
     "check": "vp check",
+    "storybook": "storybook dev --port 6006 --no-open",
+    "storybook:check": "panda codegen --config .storybook/panda.config.ts && tsc --project stories/tsconfig.json --noEmit --incremental false",
+    "storybook:build": "vp run storybook:check && storybook build --output-dir storybook-static",
     "prepublishOnly": "vp run build"
   },
   "dependencies": {
@@ -102,8 +105,15 @@
     "@oyolincc/dev-config": "catalog:",
     "@pandacss/dev": "catalog:frontend",
     "@pandacss/preset-base": "catalog:frontend",
+    "@pandacss/vite": "catalog:",
+    "@storybook/addon-docs": "catalog:frontend",
+    "@storybook/react-vite": "catalog:frontend",
     "@types/node": "catalog:",
     "@types/react": "catalog:frontend",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "storybook": "catalog:frontend",
     "typescript": "catalog:",
     "vite-plus": "catalog:"
   },

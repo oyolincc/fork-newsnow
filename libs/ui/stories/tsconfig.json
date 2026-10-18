@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "vite-plus/client"],
+    "paths": {
+      "@/*": ["../src/*"],
+      "@newsnow/ui": ["../src/index.ts"],
+      "@newsnow/ui/tooltip": ["../src/Tooltip.tsx"],
+      "styled-system/*": ["../.storybook/styled-system/*"]
+    }
+  },
+  "include": ["./**/*.ts", "./**/*.tsx", "../.storybook/**/*.ts", "../.storybook/**/*.tsx"],
+  "exclude": ["../.storybook/styled-system"]
+}

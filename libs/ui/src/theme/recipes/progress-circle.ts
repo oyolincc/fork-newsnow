@@ -15,7 +15,7 @@ const appearance = {
 } as const
 
 export const progressCircle = defineSlotRecipe({
-  className: 'progress-circle',
+  className: 'app-progress-circle',
   jsx: ['ProgressCircle.Root', 'ProgressCircle.RootProvider'],
   slots: progressAnatomy.keys(),
   base: {

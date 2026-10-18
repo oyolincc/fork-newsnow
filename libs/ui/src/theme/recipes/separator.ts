@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const separator = defineRecipe({
-  className: 'separator',
+  className: 'app-separator',
   jsx: ['Separator'],
   base: { display: 'block', borderColor: 'gray.border.subtle' },
   variants: {

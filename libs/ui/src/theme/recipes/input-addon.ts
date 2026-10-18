@@ -6,7 +6,7 @@ const appearance = {
 } as const
 
 export const inputAddon = defineRecipe({
-  className: 'input-addon',
+  className: 'app-input-addon',
   jsx: ['InputAddon'],
   base: {
     alignItems: 'center',

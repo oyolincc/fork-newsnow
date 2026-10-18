@@ -16,7 +16,6 @@ export default defineConfig({
   presets: ['@pandacss/preset-base'],
   jsxFramework: 'react',
   separator: '-',
-  preflight: true,
   include: ['./src/**/*.{js,jsx,ts,tsx}'],
   exclude: [],
   // strictTokens: true,

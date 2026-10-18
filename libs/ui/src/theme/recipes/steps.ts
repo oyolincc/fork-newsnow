@@ -34,7 +34,7 @@ const appearance = {
 } as const
 
 export const steps = defineSlotRecipe({
-  className: 'steps',
+  className: 'app-steps',
   jsx: ['Steps.Root', 'Steps.RootProvider'],
   slots: stepsAnatomy.extendWith('title', 'description').keys(),
   base: {

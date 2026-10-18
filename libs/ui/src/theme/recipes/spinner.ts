@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const spinner = defineRecipe({
-  className: 'spinner',
+  className: 'app-spinner',
   jsx: ['Spinner'],
   base: {
     '--spinner-track-color': 'transparent',

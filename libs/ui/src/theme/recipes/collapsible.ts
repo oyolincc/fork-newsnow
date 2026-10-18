@@ -2,7 +2,7 @@ import { collapsibleAnatomy } from '@ark-ui/react/anatomy'
 import { defineSlotRecipe } from '@pandacss/dev'
 
 export const collapsible = defineSlotRecipe({
-  className: 'collapsible',
+  className: 'app-collapsible',
   jsx: ['Collapsible.Root', 'Collapsible.RootProvider'],
   slots: collapsibleAnatomy.keys(),
   base: {

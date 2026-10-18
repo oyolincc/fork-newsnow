@@ -123,7 +123,7 @@ const appearance = {
 } as const
 
 export const colorPicker = defineSlotRecipe({
-  className: 'color-picker',
+  className: 'app-color-picker',
   jsx: ['ColorPicker.Root', 'ColorPicker.RootProvider'],
   slots: colorPickerAnatomy.extendWith('sliders', 'channelText').keys(),
   base: {

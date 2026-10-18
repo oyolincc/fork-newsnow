@@ -180,7 +180,7 @@ const appearance = {
 } as const
 
 export const datePicker = defineSlotRecipe({
-  className: 'date-picker',
+  className: 'app-date-picker',
   jsx: ['DatePicker.Root', 'DatePicker.RootProvider'],
   slots: datePickerAnatomy.extendWith('indicatorGroup', 'weekNumberCellText', 'valueText').keys(),
   base: {

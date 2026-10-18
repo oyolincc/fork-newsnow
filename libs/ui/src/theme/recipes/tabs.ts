@@ -16,7 +16,7 @@ const appearance = {
 
 export const tabs = defineSlotRecipe({
   slots: tabsAnatomy.keys(),
-  className: 'tabs',
+  className: 'app-tabs',
   jsx: ['Tabs.Root', 'Tabs.RootProvider'],
   base: {
     root: {

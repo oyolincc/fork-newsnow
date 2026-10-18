@@ -19,7 +19,7 @@ const shapeStyles = {
 } as const
 
 export const avatar = defineSlotRecipe({
-  className: 'avatar',
+  className: 'app-avatar',
   jsx: ['Avatar.Root', 'Avatar.RootProvider'],
   slots: avatarAnatomy.keys(),
   base: {

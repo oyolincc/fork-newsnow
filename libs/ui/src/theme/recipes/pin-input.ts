@@ -5,7 +5,7 @@ import { input } from './input'
 const sizeStyles = { input: { width: 'var(--input-height)' }, control: { gap: '2' } } as const
 
 export const pinInput = defineSlotRecipe({
-  className: 'pin-input',
+  className: 'app-pin-input',
   jsx: ['PinInput.Root', 'PinInput.RootProvider'],
   slots: pinInputAnatomy.keys(),
   base: {

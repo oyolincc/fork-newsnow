@@ -11,7 +11,7 @@ const sizeStyles = {
 } as const
 
 export const drawer = defineSlotRecipe({
-  className: 'drawer',
+  className: 'app-drawer',
   jsx: ['Drawer.Root', 'Drawer.RootProvider'],
   slots: dialogAnatomy.extendWith('header', 'body', 'footer').keys(),
   base: {

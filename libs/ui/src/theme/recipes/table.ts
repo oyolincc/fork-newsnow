@@ -28,7 +28,7 @@ const appearance = {
 } as const
 
 const definition = {
-  className: 'table',
+  className: 'app-table',
   jsx: ['Table.Root'],
   slots: ['root', 'body', 'cell', 'foot', 'head', 'header', 'row', 'caption'],
   base: {

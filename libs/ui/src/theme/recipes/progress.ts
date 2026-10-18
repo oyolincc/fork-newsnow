@@ -23,7 +23,7 @@ const appearance = {
 
 export const progress = defineSlotRecipe({
   slots: progressAnatomy.keys(),
-  className: 'progress',
+  className: 'app-progress',
   jsx: ['Progress.Root', 'Progress.RootProvider'],
   base: {
     root: { position: 'relative' },

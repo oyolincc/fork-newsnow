@@ -30,7 +30,7 @@ const sizeStyles = {
 } as const
 
 export const switchRecipe = defineSlotRecipe({
-  className: 'switch',
+  className: 'app-switch',
   jsx: ['Switch.Root', 'Switch.RootProvider'],
   slots: switchAnatomy.extendWith('indicator').keys(),
   base: {

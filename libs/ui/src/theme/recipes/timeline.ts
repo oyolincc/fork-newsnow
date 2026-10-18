@@ -30,7 +30,7 @@ const appearance = {
 } as const
 
 export const timeline = defineSlotRecipe({
-  className: 'timeline',
+  className: 'app-timeline',
   jsx: ['Timeline.Root'],
   slots: ['root', 'item', 'connector', 'separator', 'indicator', 'content', 'title', 'description'],
   base: {

@@ -10,7 +10,7 @@ const sizeStyles = {
 } as const
 
 export const menu = defineSlotRecipe({
-  className: 'menu',
+  className: 'app-menu',
   jsx: ['Menu.Root', 'Menu.RootProvider'],
   slots: menuAnatomy.keys(),
   base: {

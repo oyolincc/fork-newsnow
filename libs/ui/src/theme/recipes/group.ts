@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const group = defineRecipe({
-  className: 'group',
+  className: 'app-group',
   jsx: ['Group', 'ButtonGroup'],
   base: {
     display: 'inline-flex',

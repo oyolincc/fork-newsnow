@@ -13,8 +13,15 @@ export default defineConfig({
   globalCss: {
     extend: {
       'html, body': { minHeight: 'full', margin: '0' },
+      html: {
+        colorPalette: 'gray',
+      },
       'html.dark': { colorScheme: 'dark' },
-      body: { fontFamily: 'sans' },
+      body: {
+        fontFamily: 'sans',
+        background: 'gray.bg.page',
+        color: 'gray.fg.default',
+      },
     },
   },
   jsxFramework: 'react',

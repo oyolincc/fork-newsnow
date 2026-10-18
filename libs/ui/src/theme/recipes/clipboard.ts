@@ -2,7 +2,7 @@ import { clipboardAnatomy } from '@ark-ui/react/anatomy'
 import { defineSlotRecipe } from '@pandacss/dev'
 
 export const clipboard = defineSlotRecipe({
-  className: 'clipboard',
+  className: 'app-clipboard',
   jsx: ['Clipboard.Root', 'Clipboard.RootProvider'],
   slots: [...clipboardAnatomy.keys(), 'valueText'],
   base: {

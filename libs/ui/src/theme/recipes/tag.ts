@@ -29,7 +29,7 @@ const appearance = {
 } as const
 
 export const tag = defineSlotRecipe({
-  className: 'tag',
+  className: 'app-tag',
   jsx: ['Tag.Root'],
   slots: ['root', 'label', 'startElement', 'endElement', 'closeTrigger'],
   base: {

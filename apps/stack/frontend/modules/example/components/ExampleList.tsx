@@ -7,9 +7,10 @@ export function ExampleList({ examples }: { examples?: Example[] }) {
       {examples?.map((example) => (
         <li
           className={css({
-            borderRadius: 'sm',
+            bg: 'gray.bg.surface',
+            borderRadius: 'md',
             borderWidth: 'px',
-            borderColor: 'gray.border.default',
+            borderColor: 'gray.border.subtle',
             p: '3',
           })}
           key={example.id}>

@@ -95,7 +95,7 @@ const appearance = {
 } as const
 
 export const treeView = defineSlotRecipe({
-  className: 'tree-view',
+  className: 'app-tree-view',
   jsx: ['TreeView.Root', 'TreeView.RootProvider'],
   slots: treeViewAnatomy.keys(),
   base: {

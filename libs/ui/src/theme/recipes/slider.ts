@@ -18,7 +18,7 @@ const sizeStyles = {
 } as const
 
 export const slider = defineSlotRecipe({
-  className: 'slider',
+  className: 'app-slider',
   jsx: ['Slider.Root', 'Slider.RootProvider'],
   slots: sliderAnatomy.extendWith('markerIndicator').keys(),
   base: {

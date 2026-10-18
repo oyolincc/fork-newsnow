@@ -11,7 +11,7 @@ const controlAppearance = {
 
 export const checkbox = defineSlotRecipe({
   slots: checkboxAnatomy.keys(),
-  className: 'checkbox',
+  className: 'app-checkbox',
   jsx: ['Checkbox.Root', 'Checkbox.RootProvider', 'Checkbox.Group', 'CheckboxGroup'],
   base: {
     root: {

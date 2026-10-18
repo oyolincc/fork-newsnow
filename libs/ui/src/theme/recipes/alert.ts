@@ -5,7 +5,7 @@ const sizeStyles = { content: { gap: '1' } } as const
 const appearance = { root: { borderRadius: 'md' }, title: { fontWeight: 'semibold' } } as const
 
 export const alert = defineSlotRecipe({
-  className: 'alert',
+  className: 'app-alert',
   jsx: ['Alert.Root'],
   slots: ['root', 'content', 'description', 'indicator', 'title'],
   base: {

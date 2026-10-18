@@ -14,7 +14,7 @@ const sizeStyles = {
 } as const
 
 export const input = {
-  className: 'input',
+  className: 'app-input',
   jsx: ['Input', 'Field.Input', 'PasswordInput'],
   base: {
     appearance: 'none',

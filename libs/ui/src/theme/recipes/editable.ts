@@ -5,7 +5,7 @@ const sizeStyles = { root: { gap: '1.5' }, control: { gap: '1.5' } } as const
 
 export const editable = defineSlotRecipe({
   slots: editableAnatomy.keys(),
-  className: 'editable',
+  className: 'app-editable',
   jsx: ['Editable.Root', 'Editable.RootProvider'],
   base: {
     root: { alignItems: 'center', display: 'inline-flex', position: 'relative', width: 'full' },

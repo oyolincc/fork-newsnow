@@ -8,7 +8,7 @@ const itemSpacing = {
 } as const
 
 export const segmentGroup = defineSlotRecipe({
-  className: 'segment-group',
+  className: 'app-segment-group',
   jsx: ['SegmentGroup.Root', 'SegmentGroup.RootProvider'],
   slots: segmentGroupAnatomy.keys(),
   base: {

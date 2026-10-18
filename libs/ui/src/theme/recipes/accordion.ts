@@ -17,7 +17,7 @@ const appearance = {
 } as const
 
 export const accordion = defineSlotRecipe({
-  className: 'accordion',
+  className: 'app-accordion',
   jsx: ['Accordion.Root', 'Accordion.RootProvider'],
   slots: accordionAnatomy.extendWith('itemBody').keys(),
   base: {

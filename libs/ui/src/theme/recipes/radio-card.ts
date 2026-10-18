@@ -25,7 +25,7 @@ const sizeStyles = {
 } as const
 
 export const radioCard = defineSlotRecipe({
-  className: 'radio-card',
+  className: 'app-radio-card',
   jsx: ['RadioCard.Root', 'RadioCard.RootProvider'],
   slots: radioGroupAnatomy
     .extendWith('itemContent', 'itemDescription', 'itemAddon', 'itemIndicator')

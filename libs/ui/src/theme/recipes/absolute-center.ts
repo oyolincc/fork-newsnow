@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const absoluteCenter = defineRecipe({
-  className: 'absolute-center',
+  className: 'app-absolute-center',
   jsx: ['AbsoluteCenter'],
   base: {
     position: 'absolute',

@@ -40,7 +40,7 @@ const appearance = {
 } as const
 
 export const numberInput = defineSlotRecipe({
-  className: 'number-input',
+  className: 'app-number-input',
   jsx: ['NumberInput.Root', 'NumberInput.RootProvider'],
   slots: numberInputAnatomy.keys(),
   base: {

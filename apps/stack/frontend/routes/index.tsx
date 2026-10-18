@@ -54,8 +54,10 @@ function Home() {
           {processedExample && (
             <pre
               className={css({
-                borderRadius: 'sm',
+                borderRadius: 'md',
                 bg: 'gray.bg.surface',
+                color: 'gray.fg.muted',
+                boxShadow: 'inset 0 0 0 1px token(colors.gray.border.subtle)',
                 p: '4',
                 overflowX: 'auto',
               })}>

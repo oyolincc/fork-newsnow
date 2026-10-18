@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const icon = defineRecipe({
-  className: 'icon',
+  className: 'app-icon',
   jsx: ['Icon'],
   base: {
     color: 'currentcolor',

@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const skeleton = defineRecipe({
-  className: 'skeleton',
+  className: 'app-skeleton',
   jsx: ['Skeleton', 'SkeletonCircle', 'SkeletonText'],
   staticCss: [{ loading: ['true', 'false'] }],
   base: {},

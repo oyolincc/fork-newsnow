@@ -5,7 +5,7 @@ const sizeStyles = { lineHeight: '1' } as const
 const appearance = { borderRadius: 'sm', fontWeight: 'medium' } as const
 
 export const badge = defineRecipe({
-  className: 'badge',
+  className: 'app-badge',
   jsx: ['Badge'],
   base: {
     display: 'inline-flex',

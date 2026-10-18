@@ -2,7 +2,7 @@ import { popoverAnatomy } from '@ark-ui/react/anatomy'
 import { defineSlotRecipe } from '@pandacss/dev'
 
 export const popover = defineSlotRecipe({
-  className: 'popover',
+  className: 'app-popover',
   jsx: ['Popover.Root', 'Popover.RootProvider'],
   slots: popoverAnatomy.extendWith('header', 'body', 'footer').keys(),
   base: {

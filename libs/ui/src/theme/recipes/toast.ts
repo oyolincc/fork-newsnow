@@ -2,7 +2,7 @@ import { toastAnatomy } from '@ark-ui/react/anatomy'
 import { defineSlotRecipe } from '@pandacss/dev'
 
 export const toast = defineSlotRecipe({
-  className: 'toast',
+  className: 'app-toast',
   jsx: ['Toast.Root', 'Root'],
   slots: toastAnatomy.keys(),
   base: {

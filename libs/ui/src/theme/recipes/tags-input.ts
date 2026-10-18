@@ -50,7 +50,7 @@ const appearance = {
 } as const
 
 export const tagsInput = defineSlotRecipe({
-  className: 'tags-input',
+  className: 'app-tags-input',
   jsx: ['TagsInput.Root', 'TagsInput.RootProvider'],
   slots: tagsInputAnatomy.keys(),
   base: {

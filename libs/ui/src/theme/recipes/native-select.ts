@@ -19,7 +19,7 @@ const appearance = {
 } as const
 
 export const nativeSelect = defineSlotRecipe({
-  className: 'native-select',
+  className: 'app-native-select',
   jsx: ['NativeSelect.Root'],
   slots: ['root', 'field', 'indicator'],
   base: {

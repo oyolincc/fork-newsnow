@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const heading = defineRecipe({
-  className: 'heading',
+  className: 'app-heading',
   jsx: ['Heading'],
   base: { fontWeight: 'semibold' },
   variants: {

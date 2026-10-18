@@ -35,7 +35,7 @@ const appearance = {
 } as const
 
 export const combobox = defineSlotRecipe({
-  className: 'combobox',
+  className: 'app-combobox',
   jsx: ['Combobox.Root', 'Combobox.RootProvider'],
   slots: comboboxAnatomy.extendWith('indicatorGroup').keys(),
   base: {

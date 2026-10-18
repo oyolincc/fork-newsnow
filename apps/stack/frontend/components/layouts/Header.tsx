@@ -4,8 +4,14 @@ import { css } from 'styled-system/css'
 export function Header() {
   return (
     <header
-      className={css({ borderBottomWidth: 'px', borderColor: 'gray.border.default', px: '8', py: '4' })}>
-      <Text as="strong" fontWeight="bold">
+      className={css({
+        bg: 'gray.bg.surface',
+        borderBottomWidth: 'px',
+        borderColor: 'gray.border.subtle',
+        px: '8',
+        py: '4',
+      })}>
+      <Text as="strong" fontWeight="semibold">
         Hono fullstack
       </Text>
     </header>

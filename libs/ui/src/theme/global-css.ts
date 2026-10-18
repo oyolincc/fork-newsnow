@@ -8,12 +8,5 @@ export const globalCss = defineGlobalStyles({
       '--global-color-selection': 'colors.colorPalette.bg.subtle',
       '--global-color-focus-ring': 'colors.colorPalette.ring',
     },
-    html: {
-      colorPalette: 'gray',
-    },
-    body: {
-      background: 'gray.bg.page',
-      color: 'gray.fg.default',
-    },
   },
 })

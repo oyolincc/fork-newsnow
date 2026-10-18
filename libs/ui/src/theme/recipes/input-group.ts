@@ -10,7 +10,7 @@ const inputPadding = {
 } as const
 
 export const inputGroup = defineSlotRecipe({
-  className: 'input-group',
+  className: 'app-input-group',
   jsx: ['InputGroup'],
   slots: ['root', 'element'],
   base: {

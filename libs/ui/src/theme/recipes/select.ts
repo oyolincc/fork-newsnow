@@ -41,7 +41,7 @@ const appearance = {
 } as const
 
 export const select = defineSlotRecipe({
-  className: 'select',
+  className: 'app-select',
   jsx: ['Select.Root', 'Select.RootProvider'],
   slots: selectAnatomy.extendWith('indicatorGroup').keys(),
   base: {

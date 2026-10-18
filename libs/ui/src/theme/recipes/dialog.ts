@@ -12,7 +12,7 @@ const sizeStyles = {
 } as const
 
 export const dialog = defineSlotRecipe({
-  className: 'dialog',
+  className: 'app-dialog',
   jsx: ['Dialog.Root', 'Dialog.RootProvider'],
   slots: dialogAnatomy.extendWith('header', 'body', 'footer').keys(),
   base: {

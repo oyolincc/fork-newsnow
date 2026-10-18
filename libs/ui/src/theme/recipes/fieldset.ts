@@ -2,7 +2,7 @@ import { fieldsetAnatomy } from '@ark-ui/react/anatomy'
 import { defineSlotRecipe } from '@pandacss/dev'
 
 export const fieldset = defineSlotRecipe({
-  className: 'fieldset',
+  className: 'app-fieldset',
   jsx: ['Fieldset.Root', 'Fieldset.RootProvider'],
   slots: fieldsetAnatomy.extendWith('content', 'control').keys(),
   base: {

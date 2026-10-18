@@ -16,7 +16,7 @@ const sizeStyles = {
 } as const
 
 export const button = defineRecipe({
-  className: 'button',
+  className: 'app-button',
   jsx: ['Button', 'IconButton', 'CloseButton', 'ButtonGroup'],
   base: {
     alignItems: 'center',

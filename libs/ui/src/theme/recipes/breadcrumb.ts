@@ -17,7 +17,7 @@ const appearance = {
 } as const
 
 export const breadcrumb = defineSlotRecipe({
-  className: 'breadcrumb',
+  className: 'app-breadcrumb',
   jsx: ['Breadcrumb.Root'],
   slots: ['root', 'list', 'link', 'item', 'separator', 'ellipsis', 'currentLink'],
   base: {

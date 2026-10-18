@@ -7,7 +7,7 @@ const appearance = {
 } as const
 
 export const card = defineSlotRecipe({
-  className: 'card',
+  className: 'app-card',
   jsx: ['Card.Root'],
   slots: ['root', 'header', 'body', 'footer', 'title', 'description'],
   base: {

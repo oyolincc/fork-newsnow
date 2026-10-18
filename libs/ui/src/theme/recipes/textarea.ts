@@ -9,7 +9,7 @@ const appearance = {
 } as const
 
 export const textarea = defineRecipe({
-  className: 'textarea',
+  className: 'app-textarea',
   jsx: ['Textarea'],
   base: {
     appearance: 'none',

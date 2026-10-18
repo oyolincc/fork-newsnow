@@ -14,7 +14,7 @@ const appearance = {
 } as const
 
 export const link = defineRecipe({
-  className: 'link',
+  className: 'app-link',
   jsx: ['Link'],
   base: { alignItems: 'center', display: 'inline-flex', gap: '1.5', _icon: { boxSize: '1em' } },
   defaultVariants: { variant: 'underline' },
